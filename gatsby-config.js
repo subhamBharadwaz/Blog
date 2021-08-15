@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
+      // TODO Explore about manifest
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",

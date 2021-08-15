@@ -1,10 +1,28 @@
 export default {
+  initialColorModeName: "light",
   colors: {
-    text: "#333",
-    background: "#fff",
-    primary: "#639",
-    secondary: "#ff6347",
+    text: "#0E141B",
+    background: "#FFFFFF",
+    primary: "#FF5277",
+    modes: {
+      dark: {
+        text: "#CCD6F6",
+        background: "#0E141B",
+        primary: "#FF5277",
+      },
+      tomato: {
+        text: "#565656",
+        background: "tomato",
+        primary: "tomato",
+      },
+      deep: {
+        text: "hsl(210, 50%, 96%)",
+        background: "hsl(230, 25%, 18%)",
+        primary: "hsl(260, 100%, 80%)",
+      },
+    },
   },
+
   fonts: {
     body: "system-ui, sans-serif",
     heading: "system-ui, sans-serif",
