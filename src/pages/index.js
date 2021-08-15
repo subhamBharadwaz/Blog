@@ -3,9 +3,11 @@ import { Fragment } from "react";
 import { jsx } from "theme-ui";
 import { Global } from "@emotion/react";
 
+import Seo from "../components/seo";
 const Index = () => {
   return (
     <Fragment>
+      <Seo title="Index" />
       <Global
         styles={(theme) => ({
           "*": {
