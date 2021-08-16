@@ -64,7 +64,9 @@ module.exports = {
             },
           },
         ],
-        defaultLayouts: {},
+        defaultLayouts: {
+          posts: require.resolve("./src/components/post-layout.js"),
+        },
       },
     },
   ],

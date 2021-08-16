@@ -17,18 +17,14 @@ export default function Header() {
           sx={{
             mx: "auto",
             maxWidth: "1100",
-            width: "75vw",
+            width: ["90vw", "80vw", "75vw"],
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
           }}
         >
-          <h3
-            sx={{
-              fontWeight: "bold",
-            }}
-          >
-            <Link sx={{ color: "primary" }} to="/">
+          <h3>
+            <Link sx={{ color: "primary", transition: "ease" }} to="/">
               Subham Bharadwaz
             </Link>
           </h3>

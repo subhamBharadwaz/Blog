@@ -17,14 +17,19 @@ export default function Nav() {
         <Link
           activeClassName="active"
           sx={{
-            mr: "5",
+            mr: ["sm", "md", "lg", "xl"],
+            fontWeight: "bold",
           }}
           to="/"
         >
           Home
         </Link>
-        <Link activeClassName="active" to="/contact" sx={{ mr: "5" }}>
-          Contact
+        <Link
+          activeClassName="active"
+          to="/about"
+          sx={{ mr: ["sm", "md", "lg", "xl"], fontWeight: "bold" }}
+        >
+          About
         </Link>
         <ThemeToggle />
       </nav>

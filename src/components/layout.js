@@ -20,29 +20,41 @@ export default function Layout({
           },
           body: {
             fontFamily: theme.fonts.body,
-            fontsize: 20,
             margin: 0,
+            padding: 0,
           },
+
           a: {
             textDecoration: "none",
             color: theme.colors.text,
+            transition: theme.transitions.ease,
 
             ":focus": {
+              color: theme.colors.primary,
+            },
+            ":hover": {
               color: theme.colors.primary,
             },
           },
           ".active": {
             color: theme.colors.primary,
-            textDecoration: "underline",
           },
           ".logo": {
             color: theme.colors.primary,
+          },
+          p: {
+            fontSize: theme.styles.p.fontSize[2],
+          },
+          ul: {
+            listStyle: "none",
           },
         })}
       />
 
       <Header />
-      <main sx={{ mx: "auto", maxWidth: "1100", width: "75vw" }}>
+      <main
+        sx={{ mx: "auto", maxWidth: "1100", width: ["90vw", "80vw", "75vw"] }}
+      >
         {children}
       </main>
     </Fragment>
