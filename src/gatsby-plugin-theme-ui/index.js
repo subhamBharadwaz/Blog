@@ -10,16 +10,6 @@ export default {
         background: "#0E141B",
         primary: "#FF5277",
       },
-      tomato: {
-        text: "#565656",
-        background: "tomato",
-        primary: "tomato",
-      },
-      deep: {
-        text: "hsl(210, 50%, 96%)",
-        background: "hsl(230, 25%, 18%)",
-        primary: "hsl(260, 100%, 80%)",
-      },
     },
   },
 
@@ -43,11 +33,10 @@ export default {
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  breakpoints: ["40em", "56em", "64em"],
   styles: {
     // the keys used here reference elements in MDX
     h1: {
-      // the style object for each element
-      // can reference other values in the theme
       fontFamily: "heading",
       fontWeight: "heading",
       lineHeight: "heading",
@@ -57,10 +46,9 @@ export default {
     },
     a: {
       color: "primary",
-      ":hover, :focus": {
-        color: "secondary",
+      "&:hover, &:focus": {
+        color: "primary",
       },
     },
-    // more styles can be added as needed
   },
 };

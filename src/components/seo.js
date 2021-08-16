@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { useThemeUI } from "theme-ui";
 
 export default function Seo({ description, lang, meta, title }) {
   // Todo include author
@@ -18,6 +19,7 @@ export default function Seo({ description, lang, meta, title }) {
       }
     }
   `);
+  const { theme } = useThemeUI();
   const image = site.siteMetadata.image;
   const keywords = site.siteMetadata.keywords;
   const metaDescription = description || site.siteMetadata.description;
@@ -32,6 +34,10 @@ export default function Seo({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: "theme-color",
+          content: theme.colors.primary,
         },
         {
           name: `keywords`,

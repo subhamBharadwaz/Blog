@@ -1,5 +1,4 @@
 /**@jsx jsx */
-
 import { jsx } from "theme-ui";
 import { preToCodeBlock } from "mdx-utils";
 import Highlight, { defaultProps } from "prism-react-renderer";

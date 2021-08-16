@@ -1,9 +1,9 @@
 /**@jsx jsx*/
 import { Fragment } from "react";
 import { jsx } from "theme-ui";
-import { Link } from "gatsby";
+import { Global } from "@emotion/react";
 import Seo from "./seo";
-import ThemeToggle from "./themeToggle";
+import Header from "./header";
 
 export default function Layout({
   children,
@@ -13,12 +13,38 @@ export default function Layout({
   return (
     <Fragment>
       <Seo title={title} description={description} />
-      <header>
-        {title}
-        <ThemeToggle />
-        <nav>Blog</nav>
-      </header>
-      <main>{children}</main>
+      <Global
+        styles={(theme) => ({
+          "*": {
+            boxSizing: "border-box",
+          },
+          body: {
+            fontFamily: theme.fonts.body,
+            fontsize: 20,
+            margin: 0,
+          },
+          a: {
+            textDecoration: "none",
+            color: theme.colors.text,
+
+            ":focus": {
+              color: theme.colors.primary,
+            },
+          },
+          ".active": {
+            color: theme.colors.primary,
+            textDecoration: "underline",
+          },
+          ".logo": {
+            color: theme.colors.primary,
+          },
+        })}
+      />
+
+      <Header />
+      <main sx={{ mx: "auto", maxWidth: "1100", width: "75vw" }}>
+        {children}
+      </main>
     </Fragment>
   );
 }
