@@ -59,7 +59,6 @@ export default {
     "@media (min-width: 56em) and (orientation: landscape)",
     "64em",
   ],
-
   styles: {
     root: {
       fontFamily: "body",

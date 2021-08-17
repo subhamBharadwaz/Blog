@@ -28,11 +28,11 @@ export default function PostContainer() {
     <ul
       sx={{
         m: 0,
-        px: 3,
+        px: [0, 3, 3],
         py: 4,
       }}
     >
-      <Grid>
+      <Grid columns={["auto", "500", "1fr 1fr"]} gap={32}>
         {posts.map((post) => (
           <PostPreview
             key={post.id}
