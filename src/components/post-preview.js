@@ -5,7 +5,8 @@ import { Link } from "gatsby";
 export default function PostPreview({ title, abstract, key, slug }) {
   return (
     <Fragment>
-      <div
+      <Link
+        to={slug}
         sx={{
           bg: "secondary",
           p: ["lg", null, "xl"],
@@ -19,21 +20,10 @@ export default function PostPreview({ title, abstract, key, slug }) {
             width: "100%",
           }}
         >
-          <h2 sx={{ m: 0 }}>
-            <Link
-              to={slug}
-              sx={{
-                ":hover,:focus": {
-                  color: "primary",
-                },
-              }}
-            >
-              {title}
-            </Link>
-          </h2>
-          <p>{abstract}</p>
+          <h2 sx={{ m: 0, fontFamily: "heading" }}>{title}</h2>
+          <p sx={{ fontSize: 18, color: "text" }}>{abstract}</p>
         </li>
-      </div>
+      </Link>
     </Fragment>
   );
 }

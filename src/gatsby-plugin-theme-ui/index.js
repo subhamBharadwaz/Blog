@@ -1,3 +1,7 @@
+import "@fontsource/inter";
+import "@fontsource/lato";
+import "@fontsource/fira-code";
+
 export default {
   initialColorModeName: "light",
   colors: {
@@ -7,7 +11,7 @@ export default {
     primary: "#FF5277",
     modes: {
       dark: {
-        text: "#CCD6F6",
+        text: "#F2F5F7",
         background: "#0E141B",
         secondary: "#1E262F",
         primary: "#FF5277",
@@ -19,9 +23,9 @@ export default {
   },
 
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Poppins, sans-serif",
-    monospace: "Menlo, monospace",
+    body: "Inter,sans-serif",
+    heading: "Lato,sans-serif",
+    monospace: "Fira Code,Menlo, monospace",
   },
   fontWeights: {
     body: 400,
@@ -30,7 +34,7 @@ export default {
     display: 800,
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.8,
     heading: 1.125,
   },
   letterSpacings: {
@@ -66,15 +70,16 @@ export default {
       lineHeight: "body",
     },
     p: {
-      fontSize: [16, 18, 20],
+      fontSize: 18,
+      marginBottom: 32,
     },
     h1: {
       variant: "text.heading",
-      fontSize: [24, 32, 48],
+      fontSize: 32,
     },
     h2: {
       variant: "text.heading",
-      fontSize: [20, 24, 32],
+      fontSize: 24,
     },
     a: {
       color: "primary",

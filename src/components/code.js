@@ -22,6 +22,7 @@ const Code = (props) => {
       <LivePreview
         sx={{
           border: (theme) => `1px solid ${theme.colors.background}`,
+
           p: 4,
           "div :first-child": {
             mt: 0,
@@ -41,7 +42,13 @@ const Code = (props) => {
         <pre
           className={className}
           style={style}
-          sx={{ p: 4, overflow: "scroll", variant: "prism-highlight" }}
+          sx={{
+            p: 25,
+            overflow: "scroll",
+            variant: "prism-highlight",
+            borderRadius: 5,
+            fontFamily: "monospace",
+          }}
         >
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>

@@ -2,8 +2,10 @@
 import { Fragment } from "react";
 import { jsx } from "theme-ui";
 import { Global } from "@emotion/react";
+
 import Seo from "./seo";
 import Header from "./header";
+import Footer from "./footer";
 
 export default function Layout({
   children,
@@ -19,7 +21,6 @@ export default function Layout({
             boxSizing: "border-box",
           },
           body: {
-            fontFamily: theme.fonts.body,
             margin: 0,
             padding: 0,
           },
@@ -42,9 +43,7 @@ export default function Layout({
           ".logo": {
             color: theme.colors.primary,
           },
-          p: {
-            fontSize: theme.styles.p.fontSize[2],
-          },
+
           ul: {
             listStyle: "none",
           },
@@ -53,10 +52,16 @@ export default function Layout({
 
       <Header />
       <main
-        sx={{ mx: "auto", maxWidth: "1100", width: ["90vw", "80vw", "75vw"] }}
+        sx={{
+          mx: "auto",
+          py: 72,
+          maxWidth: "1100",
+          width: ["90vw", "80vw", "75vw"],
+        }}
       >
         {children}
       </main>
+      <Footer />
     </Fragment>
   );
 }
