@@ -1,5 +1,5 @@
 /**@jsx jsx */
-import { Fragment } from "react";
+
 import { jsx, Grid } from "theme-ui";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import PostPreview from "./post-preview";
@@ -7,17 +7,21 @@ import PostPreview from "./post-preview";
 export default function PostContainer() {
   const data = useStaticQuery(graphql`
     query GetPostsQuery {
-      allMdx(filter: { frontmatter: { isPublished: { eq: true } } }) {
+      allMdx(
+        sort: { fields: frontmatter___publishedOn, order: DESC }
+        limit: 6
+        filter: { frontmatter: { isPublished: { eq: true } } }
+      ) {
         nodes {
+          frontmatter {
+            abstract
+            isPublished
+            seoTitle
+            title
+            publishedOn(fromNow: true)
+          }
           id
           slug
-          frontmatter {
-            title
-            seoTitle
-            abstract
-            publishedOn(fromNow: true)
-            isPublished
-          }
         }
       }
     }

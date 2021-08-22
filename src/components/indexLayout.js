@@ -4,7 +4,7 @@ import { jsx } from "theme-ui";
 import { Global } from "@emotion/react";
 
 import Seo from "./seo";
-import Header from "./header";
+import IndexHeader from "./indexHeader";
 import Footer from "./footer";
 
 export default function Layout({
@@ -20,7 +20,6 @@ export default function Layout({
           "*": {
             boxSizing: "border-box",
           },
-
           body: {
             margin: 0,
             padding: 0,
@@ -61,7 +60,7 @@ export default function Layout({
           minHeight: "100vh",
         }}
       >
-        <Header />
+        <IndexHeader />
         <main
           sx={{
             mx: "auto",

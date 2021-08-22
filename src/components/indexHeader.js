@@ -3,18 +3,14 @@ import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 import Nav from "./nav";
 
-export default function Header() {
+export default function IndexHeader() {
   return (
     <header
       sx={{
         minHeight: "10vh",
         py: "sm",
         width: "100%",
-        bg: "background",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: 10,
+        bg: "tertiary",
       }}
     >
       <div

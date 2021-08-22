@@ -7,19 +7,21 @@ export default {
   colors: {
     text: "#0E141B",
     background: "#EFF1F5",
-    secondary: "#fff",
     primary: "#FF5277",
+    secondary: "#fff",
+    tertiary: "#CAE4F5",
     modes: {
       dark: {
         text: "#F2F5F7",
         background: "#0E141B",
-        secondary: "#1E262F",
         primary: "#FF5277",
+        secondary: "#1E262F",
+        tertiary: "#121A22",
       },
     },
   },
   transitions: {
-    ease: "all .3s ease ",
+    ease: "all .2s ease ",
   },
 
   fonts: {
@@ -63,6 +65,7 @@ export default {
     "@media (min-width: 56em) and (orientation: landscape)",
     "64em",
   ],
+
   styles: {
     root: {
       fontFamily: "body",
@@ -76,15 +79,20 @@ export default {
     h1: {
       variant: "text.heading",
       fontSize: 32,
+      pb: "lg",
     },
     h2: {
       variant: "text.heading",
       fontSize: 24,
     },
     a: {
-      color: "primary",
+      color: "text",
+      fontWeight: "bold",
+      p: "xs",
+      bg: "secondary",
       "&:hover, &:focus": {
-        color: "primary",
+        textDecoration: "underline",
+        color: "text",
       },
     },
   },

@@ -1,5 +1,4 @@
 /**@jsx jsx*/
-import * as React from "react";
 import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 
@@ -17,13 +16,13 @@ export default function Footer() {
         width: ["90vw", "80vw", "75vw"],
       }}
     >
-      <Link to="/" sx={{ p: 2 }}>
+      <Link to="/" sx={{ fontWeight: "bold" }}>
         Home
       </Link>
-      <Link to="/" sx={{ p: 2 }}>
+      <Link to="/" sx={{ ml: ["sm", "md", "lg", "xl"], fontWeight: "bold" }}>
         Blog
       </Link>
-      <Link to="/" sx={{ p: 2 }}>
+      <Link to="/" sx={{ ml: ["sm", "md", "lg", "xl"], fontWeight: "bold" }}>
         About
       </Link>
       <div sx={{ mx: "auto" }} />

@@ -1,0 +1,123 @@
+---
+title: How to setup MDX in Gatsby
+seoTitle: Setup MDX in Gatsbyjs
+abstract: A quick configuration guide to using mdx in gatsby. In this post, I'll cover how to set up mdx with gatsby, access images from mdx files and default styling of mdx posts.
+isPublished: true
+publishedOn: 2021-08-25
+layout: Article
+tags: ["gatsby", "mdx", "react"]
+---
+
+# How to setup MDX in Gatsby
+
+If you are trying to make a blog or and content-rich static website, **markdown** is the best option! But, if we can create jsx components in markdown files, it will be great, right? Well, with <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>, we can do pretty much everything. You have full control over your documentation, testing, and design pages.
+
+## Installation
+
+Install the following packages
+
+```shell
+yarn add gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
+
+Let's install <a href="https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/" target="_blank" rel="noopener noreferrer">gatsby-plugin-filesystem</a> so that we can make use of frontmatter, generate Gatsby nodes from local files, and use import/export functionality in our MDX files
+
+```shell
+yarn add gatsby-source-filesystem
+```
+
+### Additional plugins
+
+I like to create posts in a different folder named **posts**. By default, you can access pages only from the **pages folder**. To access posts from the posts folder, create a folder **src/posts** and install the <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-page-creator/" target="_blank" rel="noopener noreferrer">gatsby-plugin-page-creator</a> plugin.
+
+```shell
+yarn add gatsby-plugin-page-creator
+```
+
+And in the future, you would like to import images in mdx files also. To access photos from mdx files, you have to install one more additional plugin, <a href="https://www.gatsbyjs.com/plugins/gatsby-remark-images/" target="_blank" rel="noopener noreferrer">gatsby-remark-images</a>.
+
+```shell
+yarn add gatsby-remark-images
+```
+
+## Configuration
+
+Open **gatsby-config.js** and add the following.
+
+```javascript
+{
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/posts`,
+      },
+    },
+
+ {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/posts`,
+      },
+    },
+
+"gatsby-remark-images",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1200,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+```
+
+By default, **linkImagesToOriginal** is **true**, which treats our images as a link to the original image. So, I changed it to **false**.
+
+To give the default page layout to the mdx posts also, you have to write one more line.
+
+```javascript
+ {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1200,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+        defaultLayouts: {
+          posts: require.resolve("./src/components/post-layout.js"),
+        },
+      },
+    },
+```
+
+Here, I created a component, **post-layout.js**, and gave the default layout to it. For example,
+
+```jsx
+import * as React from "react";
+import { Link } from "gatsby";
+import Layout from "./layout";
+
+export default function PostLayout({ children, pageContext }) {
+  const { title, abstract } = pageContext.frontmatter;
+
+  return (
+    <Layout title={title} description={abstract}>
+      {children}
+      <Link to="/">&larr; back</Link>
+    </Layout>
+  );
+}
+```
+
+This setup will work fine for almost all the things you'll need.

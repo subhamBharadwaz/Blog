@@ -5,17 +5,14 @@ import Layout from "../components/layout";
 const About = () => {
   return (
     <Layout title="About" description="Who is Subham Bharadwaz?">
-      <h1>About</h1>
+      <h1>Hello world!</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-        doloribus aperiam quas tenetur fugiat animi est voluptatibus magnam ut
-        quasi!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque rem
-        soluta laudantium nemo eos eveniet, facere dolore rerum quasi ipsum
-        excepturi omnis quam, beatae repellendus odio vero totam labore in
-        deleniti! Magni dignissimos a quidem totam alias neque! Nisi, labore?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quaerat
+        expedita iste! Consectetur commodi asperiores alias, facere possimus
+        atque impedit nulla repellat numquam sunt doloremque quis, ducimus
+        labore soluta autem assumenda blanditiis quam eligendi? Officiis itaque
+        nostrum iste ab corporis.
+        <a href="d">fff</a>
       </p>
     </Layout>
   );

@@ -44,7 +44,7 @@ module.exports = {
         name: "posts",
         path: `${__dirname}/src/posts`,
       },
-      __key: "pages",
+      __key: "posts",
     },
     {
       resolve: "gatsby-plugin-page-creator",
