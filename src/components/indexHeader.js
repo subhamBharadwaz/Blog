@@ -10,7 +10,7 @@ export default function IndexHeader() {
         minHeight: "10vh",
         py: "sm",
         width: "100%",
-        bg: "tertiary",
+        bg: "background",
       }}
     >
       <div

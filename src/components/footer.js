@@ -19,10 +19,10 @@ export default function Footer() {
       <Link to="/" sx={{ fontWeight: "bold" }}>
         Home
       </Link>
-      <Link to="/" sx={{ ml: ["sm", "md", "lg", "xl"], fontWeight: "bold" }}>
-        Blog
-      </Link>
-      <Link to="/" sx={{ ml: ["sm", "md", "lg", "xl"], fontWeight: "bold" }}>
+      <Link
+        to="/about"
+        sx={{ ml: ["sm", "md", "lg", "xl"], fontWeight: "bold" }}
+      >
         About
       </Link>
       <div sx={{ mx: "auto" }} />
