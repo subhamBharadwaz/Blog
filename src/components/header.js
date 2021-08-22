@@ -29,7 +29,7 @@ export default function Header() {
       >
         <h3>
           <Link sx={{ color: "primary", transition: "ease" }} to="/">
-            Subham
+            Subham Bharadwaz
           </Link>
         </h3>
         <Nav />

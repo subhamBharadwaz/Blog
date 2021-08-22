@@ -61,7 +61,9 @@ const Code = (props) => {
           style={style}
           sx={{
             p: 25,
-            overflow: "scroll",
+            overflow: "auto",
+            wordWrap: "break-word",
+            whiteSpace: "pre",
             variant: "prism-highlight",
             borderRadius: 5,
             fontFamily: "monospace",
