@@ -1,5 +1,4 @@
 /**@jsx jsx*/
-import { Fragment } from "react";
 import { jsx } from "theme-ui";
 
 export default function Footer() {

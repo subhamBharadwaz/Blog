@@ -1,54 +1,37 @@
-import * as React from "react"
-import { Link } from "gatsby"
+/** @jsx jsx*/
+import { jsx } from "theme-ui";
+import { Link } from "gatsby";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import Layout from "../components/layout";
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
+const NotFound = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
+    <Layout>
+      <h1>404 Page not found</h1>
+      <p>
+        <button
+          sx={{
+            appearance: "none",
+            display: "inline-block",
+            textAlign: "center",
+            lineHeight: "inherit",
+            textDecoration: "none",
+            fontSize: "inherit",
+            bg: "secondary",
+            color: "text",
+            m: 0,
+            p: "md",
+            fontWeight: "bold",
+            border: 0,
+            borderRadius: 4,
+            variant: "buttons.primary",
+          }}
+        >
+          <Link to="/">Back to Home</Link>
+        </button>
       </p>
-    </main>
-  )
-}
+    </Layout>
+  );
+};
 
-export default NotFoundPage
+export default NotFound;
