@@ -35,8 +35,7 @@ const About = () => {
           </p>
           <p>
             This blog is my personal space where I share what I'm learning about
-            shipping great products, becoming a better developer and growing a
-            career in tech.
+            shipping great products, front-end technologies and code snippets.
           </p>
           <div className="icons">
             <a
