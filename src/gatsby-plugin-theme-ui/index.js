@@ -9,14 +9,14 @@ export default {
     background: "#EFF1F5",
     primary: "#FF5277",
     secondary: "#fff",
-    tertiary: "#CAE4F5",
+    tertiary: "#b6b6b6",
     modes: {
       dark: {
         text: "#F2F5F7",
         background: "#0E141B",
         primary: "#FF5277",
         secondary: "#1E262F",
-        tertiary: "#121A22",
+        tertiary: "#a3a3a3",
       },
     },
   },

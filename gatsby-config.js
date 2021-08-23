@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Subham Bharadwaz's blog",
+    siteUrl: "https://www.subhambharadwaz.codes",
+    title: "Subham Bharadwaz - Personal Blog",
     description:
       "I'm Subham Bharadwaz. This is my personal blog. Focus on React, CSS, and more!",
     keywords: "react, css, gatsby, nextjs,  serverless functions",
-    image: `https://res.cloudinary.com/dkitlfy13/image/upload/v1628779534/pexels-pixabay-261662_1_worel6.jpg`,
+    image: `https://res.cloudinary.com/dkitlfy13/image/upload/v1629731309/og_wbbalx.jpg`,
   },
   plugins: [
     "gatsby-plugin-theme-ui",

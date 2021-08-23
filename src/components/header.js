@@ -8,7 +8,7 @@ export default function Header() {
     <header
       sx={{
         minHeight: "10vh",
-        py: "sm",
+        py: "md",
         width: "100%",
         bg: "background",
         position: "fixed",
@@ -22,16 +22,24 @@ export default function Header() {
           mx: "auto",
           maxWidth: "1100",
           width: ["90vw", "80vw", "75vw"],
-          display: "flex",
+          display: ["block", "flex", "flex"],
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        <h3>
-          <Link sx={{ color: "primary", transition: "ease" }} to="/">
-            Subham Bharadwaz
-          </Link>
-        </h3>
+        <Link
+          sx={{
+            color: "primary",
+            letterSpacing: 0.5,
+            transition: "ease",
+            mb: 0,
+            fontWeight: "bold",
+          }}
+          to="/"
+        >
+          SUBHAM BHARADWAZ
+        </Link>
+
         <Nav />
       </div>
     </header>
