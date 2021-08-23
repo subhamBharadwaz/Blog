@@ -4,8 +4,7 @@ import { MoonIcon } from "./svg/moon";
 import { SunIcon } from "./svg/sun";
 
 export default function ThemeToggle() {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [colorMode, setColorMode] = useColorMode(prefersDark);
+  const [colorMode, setColorMode] = useColorMode();
 
   const nextColorMode = colorMode === "light" ? "dark" : "light";
 
