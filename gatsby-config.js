@@ -5,7 +5,7 @@ module.exports = {
     description:
       "I'm Subham Bharadwaz. This is my personal blog. Focus on React, CSS, and more!",
     keywords: "react, css, gatsby, nextjs,  serverless functions",
-    image: `https://res.cloudinary.com/dkitlfy13/image/upload/v1629731309/og_wbbalx.jpg`,
+    image: `https://res.cloudinary.com/dkitlfy13/image/upload/v1629734010/blog_jbbhbf.jpg`,
   },
   plugins: [
     "gatsby-plugin-theme-ui",
