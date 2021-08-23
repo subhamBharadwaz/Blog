@@ -1,5 +1,7 @@
 # Blog
 
+## https://www.subhambharadwaz.codes
+
 Personal blog, build with [gatsby](https://www.gatsbyjs.com/),[theme-ui](https://theme-ui.com/) and [MDX](https://mdxjs.com/)
 
 ## 🛠 Installation & Set Up
