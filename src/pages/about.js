@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import Layout from "../components/layout";
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 const About = () => {
@@ -51,7 +50,7 @@ const About = () => {
                 width="2em"
                 height="2em"
                 data-icon="github"
-                class="svg-inline--fa fa-github fa-w-16"
+                className="svg-inline--fa fa-github fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
@@ -77,7 +76,7 @@ const About = () => {
                 width="2em"
                 height="2em"
                 data-icon="twitter"
-                class="svg-inline--fa fa-twitter fa-w-16"
+                className="svg-inline--fa fa-twitter fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -104,7 +103,7 @@ const About = () => {
                 width="2em"
                 height="2em"
                 data-icon="instagram"
-                class="svg-inline--fa fa-instagram fa-w-14"
+                className="svg-inline--fa fa-instagram fa-w-14"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"

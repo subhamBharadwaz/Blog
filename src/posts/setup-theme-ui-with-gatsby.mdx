@@ -1,0 +1,61 @@
+---
+title: Setup Theme-UI with Gatsby
+seoTitle: Setup MDX in Gatsbyjs
+abstract: Theme UI is currently used in Gatsby’s official themes, but it can be used in any Gatsby site or React application. It includes the Emotion CSS-in-JS library and additional utilities for styling MDX and using configurations and themes from Typography.js.
+isPublished: true
+publishedOn: 2021-08-29
+layout: Article
+tags: ["gatsby", "mdx", "style"]
+---
+
+# Setup Theme-UI with Gatsby
+
+<p>
+  <a href="https://theme-ui.com/" target="_blank" rel="noopener noreferrer">
+    Theme UI
+  </a>{" "}
+  is a library for creating themeable user interfaces based on constraint-based
+  design principles. Build custom component libraries, design systems, web
+  applications, Gatsby themes, and more with a flexible API for best-in-class
+  developer ergonomics. <em>I am also using theme-UI in this blog</em>.
+</p>
+
+Theme UI is currently used in Gatsby’s official themes, but it can be used in any Gatsby site or React application. It includes the <a href="https://www.gatsbyjs.com/docs/how-to/styling/emotion" target="_blank" rel="noopener noreferrer">
+Emotion</a> CSS-in-JS library and additional utilities for styling <a href="https://www.gatsbyjs.com/docs/how-to/routing/mdx/" target="_blank" rel="noopener noreferrer">MDX</a>.
+
+## Installation
+
+Install the following packages to add Theme UI.
+
+```bash
+npm i theme-ui gatsby-plugin-theme-ui
+
+```
+
+After installing the dependencies, add the following line to your **gatsby-config.js** file
+
+```javascript
+module.exports = {
+  plugins: ["gatsby-plugin-theme-ui"],
+};
+```
+
+## Customization
+
+To customize theme-UI, create a new folder **src/gatsby-plugin-theme-UI** and create a new file **index.js**.
+Theme-UI uses a theme configuration object to provide color, typography, layout, and other shared stylistic values through React context. This allows components within your site to add styles based on a predefined set of values.
+Add the following code to the **index.js file**
+
+```javascript
+// example theme file
+const theme = {
+  colors: {
+    text: "#000",
+    background: "#fff",
+  },
+};
+
+export default theme;
+```
+
+You can customize every bit of your style by following the <a href="https://theme-ui.com/getting-started" target="_blank" rel="noopener noreferrer">theme-UI</a> docs. You can also view the configuration of my blog <a href="https://github.com/subhamBharadwaz/Blog/tree/master/src/gatsby-plugin-theme-ui" target="_blank" rel="noopener noreferrer">here</a>. If you like it, don't forget to give it a ⭐.
